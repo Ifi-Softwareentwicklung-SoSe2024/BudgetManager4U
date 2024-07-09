@@ -1,4 +1,6 @@
 # BudgetManger4U
+Matriculation No.: 65368, ...
+Modul: SWE
 
 ## Description
 This is a budget planner for the module "Softwareentwicklung 2024". 
