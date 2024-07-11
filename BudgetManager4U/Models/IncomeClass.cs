@@ -2,9 +2,9 @@
 namespace BudgetManager4U;
 public class IncomeClass
 {
-    public int id { get; set; }
-    public string category { get; set; }
-    public DateTime dateExp { get; set; }
-    public decimal valExp { get; set; }
-    public string description { get; set; }
+    public int idInc { get; set; }
+    public string categoryInc { get; set; }
+    public DateTime dateInc { get; set; }
+    public decimal valInc { get; set; }
+    public string descriptionInc { get; set; }
 }
