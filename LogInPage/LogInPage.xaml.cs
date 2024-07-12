@@ -1,17 +1,13 @@
 using Microsoft.Maui.Controls;
 using System;
-using BudgetManager4U.Data;
 
-namespace BudgetManager4U.Pages
+namespace BudgetManager.Pages
 {
     public partial class LogInPage : ContentPage
     {
-        private DatabaseService _databaseService;
-
         public LogInPage()
         {
             InitializeComponent();
-            _databaseService = new DatabaseService();
         }
 
         private async void OnSignInButtonClicked(object sender, EventArgs e)
@@ -19,10 +15,10 @@ namespace BudgetManager4U.Pages
             string email = MailEntry.Text;
             string password = PasswordEntry.Text;
 
-            // Authenticate user using the database
-            User user = await _databaseService.GetUserByEmailAndPasswordAsync(email, password);
+            // Implement your authentication logic here
+            bool isAuthenticated = AuthenticateUser(email, password);
 
-            if (user != null)
+            if (isAuthenticated)
             {
                 await DisplayAlert("Success", "Login successful", "OK");
                 // Navigate to the main page or dashboard
@@ -34,9 +30,10 @@ namespace BudgetManager4U.Pages
             }
         }
 
-        private async void OnSignUpButtonClicked(object sender, EventArgs e)
+        private bool AuthenticateUser(string email, string password)
         {
-            await Navigation.PushAsync(new SignUpPage());
+            // Placeholder authentication logic
+            return !string.IsNullOrWhiteSpace(email) && !string.IsNullOrWhiteSpace(password);
         }
     }
 }
