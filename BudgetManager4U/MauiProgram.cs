@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using BudgetManager4U.Service;
+using BudgetManager4U.Views;
+using Microsoft.Extensions.Logging;
+using BudgetManager4U.ViewModels;
 
 namespace BudgetManager4U
 {
@@ -15,8 +18,22 @@ namespace BudgetManager4U
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // builder.Services.AddSingleton<DatabaseContext>();
+            builder.Services.AddTransient<UserAccountPage>();
+            builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddTransient<UserViewModel>();
+            builder.Services.AddTransient<SignUpPage>();
+            builder.Services.AddSingleton<DatabaseContext>();
+            
+            builder.Services.AddSingleton<UserService>();
+
+
+
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
+           
+           
 #endif
 
             return builder.Build();

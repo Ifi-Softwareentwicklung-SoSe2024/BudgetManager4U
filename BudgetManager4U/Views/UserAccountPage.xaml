@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetManager4U.Views.UserAccountPage"
+             Title="Account">
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto,Auto, Auto, Auto"
+    ColumnDefinitions="*,*"
+    Padding="40">
+
+       
+        <Label    Text="First Name:" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+        <Label x:Name="firstName" Text="User firstName"  Grid.Row="1" Grid.Column="2"/>
+
+        <Label    Text="Last Name:" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+        <Label x:Name="LastName" Text="User firstName"  Grid.Row="2" Grid.Column="2"/>
+
+
+        <Label Text="Email:" VerticalOptions="Center" Grid.Row="3" Grid.Column="0"/>
+        <Label x:Name="EmailText" Text="User Email"  Grid.Row="3" Grid.Column="2"/>
+
+        <Label Text="Balance:" VerticalOptions="Center" Grid.Row="4" Grid.Column="0"/>
+        <Label x:Name="BalanceText" Text="User Balance"  Grid.Row="4" Grid.Column="2"/>
+        
+        
+        <Button x:Name="AddExpense" Text="-"  Margin="5" BackgroundColor="IndianRed" Grid.Row="5" Grid.Column="0"/>
+        <Button x:Name="AddIncome" Text="+"  Margin="5" BackgroundColor="Green" Grid.Row="5" Grid.Column="2"/>
+
+
+
+
+
+
+    </Grid>
+</ContentPage>

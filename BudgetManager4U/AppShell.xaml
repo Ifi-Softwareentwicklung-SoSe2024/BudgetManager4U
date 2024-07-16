@@ -4,12 +4,42 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:BudgetManager4U"
-    Shell.FlyoutBehavior="Disabled"
+   xmlns:views="clr-namespace:BudgetManager4U.Views"
     Title="BudgetManager4U">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+
+    <FlyoutItem Title="Home" >
+        <ShellContent Title="Home"
+                    ContentTemplate="{DataTemplate local:MainPage}"
+                    Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Login" >
+        
+        <ShellContent Title="Login" 
+            ContentTemplate="{DataTemplate views:LoginPage}"
+            Route="SignUpPage" />
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Sign up" >
+        <ShellContent Title="Sign up"
+          ContentTemplate="{DataTemplate views:SignUpPage}"
+          Route="SignUpPage" />
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Account" >
+        <ShellContent Title="Account"
+      ContentTemplate="{DataTemplate views:UserAccountPage}"
+      Route="UserAccountPage" />
+    </FlyoutItem>
+
+
+
+
+
+
+
 
 </Shell>
