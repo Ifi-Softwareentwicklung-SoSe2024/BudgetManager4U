@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetManager4U.Views.SignUpPage"
+             Title="Sign Up">
+
+
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
+          ColumnDefinitions="*, *"
+          Padding="40">
+        <Label Text="First name" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+        <Entry x:Name="FirstNameInput" Placeholder="Enter First Name"  Grid.Row="0" Grid.Column="1"/>
+
+        <Label Text="Last name" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+        <Entry x:Name="LastNameInput" Placeholder="Enter Last Name"  Grid.Row="1" Grid.Column="1"/>
+        
+        <Label Text="Email" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+        <Entry x:Name="EmailInput" Placeholder="Enter Email"  Grid.Row="2" Grid.Column="1"/>
+
+        <Label Text="Password" Grid.Row="3" Grid.Column="0"/>
+        <Entry x:Name="PasswordInput" Placeholder="Enter password"  IsPassword="True"  Grid.Row="3" Grid.Column="1"/>
+
+        <Button x:Name="SignUp"   Margin="5" Text="Create account" Grid.Row="4" Grid.Column="1"/>
+
+
+
+
+    </Grid>
+
+
+</ContentPage>
