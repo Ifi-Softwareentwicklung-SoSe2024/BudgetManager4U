@@ -3,43 +3,26 @@
     x:Class="BudgetManager4U.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:BudgetManager4U"
-   xmlns:views="clr-namespace:BudgetManager4U.Views"
+    xmlns:views="clr-namespace:BudgetManager4U.Views"
     Title="BudgetManager4U">
 
-
-    <FlyoutItem Title="Home" >
-        <ShellContent Title="Home"
-                    ContentTemplate="{DataTemplate local:MainPage}"
-                    Route="MainPage" />
-    </FlyoutItem>
-
-    <FlyoutItem Title="Login" >
-        
-        <ShellContent Title="Login" 
-            ContentTemplate="{DataTemplate views:LoginPage}"
-            Route="SignUpPage" />
-    </FlyoutItem>
-
-
-    <FlyoutItem Title="Sign up" >
-        <ShellContent Title="Sign up"
-          ContentTemplate="{DataTemplate views:SignUpPage}"
-          Route="SignUpPage" />
-    </FlyoutItem>
 
 
     <FlyoutItem Title="Account" >
         <ShellContent Title="Account"
-      ContentTemplate="{DataTemplate views:UserAccountPage}"
-      Route="UserAccountPage" />
+                    ContentTemplate="{DataTemplate views:MainPage}"
+                    Route="MainPage" />
     </FlyoutItem>
-
-
-
-
-
-
+    <FlyoutItem Title="Expenses" >
+        <ShellContent Title="Expenses"
+                ContentTemplate="{DataTemplate views:ExpensesPage}"
+                Route="ExpensesPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Incomes" >
+        <ShellContent Title="Incomes"
+             ContentTemplate="{DataTemplate views:IncomesPage}"
+             Route="IncomesPage" />
+    </FlyoutItem>
 
 
 </Shell>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetManager4U.Views.MainPage"
+             xmlns:cvt="clr-namespace:BudgetManager4U.Converters"
+             Title="Account"
+             >
+
+    <ContentPage.Resources>
+        <cvt:ExpenseIncomeConverter x:Key="ExpenseIncomeConverter" />
+    </ContentPage.Resources>
+
+    <ScrollView >
+        <FlexLayout Direction="Column" BackgroundColor="Beige">
+
+
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"  />
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"  />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="300"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row ="0" Grid.Column="0"  Text="Transaction Amount"  FontSize="18"  FontAttributes="Bold"/>
+                <Label Grid.Row ="1" Grid.Column="0"  Text="Date"  FontSize="18"  FontAttributes="Bold" />
+                <Label Grid.Row ="2"  Grid.Column="0"  Text="Description"  FontSize="18" FontAttributes="Bold"/>
+
+                <Entry x:Name="TransactionAmountEntryField" Placeholder="Enter Amount"  Grid.Row ="0" Grid.Column="1" />
+                <DatePicker x:Name="DatePickerField" Format="MM/dd/yyyy" Grid.Row ="1"   Grid.Column="1" Grid.ColumnSpan="2"  />
+                <Editor x:Name="DescriptionEntryField" Placeholder="Short Description"  Grid.Row ="2" Grid.Column="1" />
+
+                <Button x:Name="ExpenseButton" Text="Add Expense" Clicked="OnExpenseClicked" BackgroundColor="OrangeRed" Grid.Row ="3" Grid.Column="0" />
+                <Button x:Name="IncomeButton" Text="Add Income" Clicked="OnIncomeClicked"  BackgroundColor="ForestGreen" Grid.Row ="3" Grid.Column="2" />
+                <Button x:Name="ExportCSVButton" Text="Export as CSV" Clicked="OnSaveCsvButtonClicked" BackgroundColor="CadetBlue" Grid.Row ="3" Grid.Column="1" />
+
+                <Label Grid.Row ="4" Grid.Column="0"  Text="Current Balance: "  FontSize="22"  FontAttributes="Bold"/>
+                <Label x:Name="balanceLabel"    Grid.Row ="4" Grid.Column="1"     FontSize="22" FontAttributes="Bold" />
+
+
+                <Label Grid.Row ="5" Grid.Column="0"  Text="Transaction Amount"  FontSize="18"  FontAttributes="Bold"/>
+                <Label Grid.Row ="5" Grid.Column="1"  Text="Date"  FontSize="18" FontAttributes="Bold" />
+                <Label Grid.Row ="5"  Grid.Column="2"  Text="Description"  FontSize="18" FontAttributes="Bold"/>
+            </Grid>
+
+
+            <ListView x:Name="listView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="OnlistViewTapped" >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell >
+                            <VerticalStackLayout >
+                                <Grid BackgroundColor="{Binding TransactionAmount, Converter={StaticResource ExpenseIncomeConverter}}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="300"  />
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="300"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0"  Text="{Binding TransactionAmount, StringFormat= '{0:C}' }"   FontSize="12"  FontAttributes="Bold"/>
+                                    <Label Grid.Column="1"  Text="{Binding Datum, StringFormat= '{0:d}'}"  FontSize="12" FontAttributes="Bold" />
+                                    <Label Grid.Column="2"  Text="{Binding Description}"  FontSize="12" FontAttributes="Bold"/>
+                                </Grid>
+                            </VerticalStackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+
+
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
+

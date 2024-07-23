@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetManager4U.Views.IncomesPage"
+             Title="Incomes">
+    <ScrollView BackgroundColor="LightGreen">
+        <FlexLayout Direction="Column">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"  />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"  />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="300"/>
+
+                </Grid.ColumnDefinitions>
+
+
+                <Label Grid.Row ="0" Grid.Column="0"  Text="Transaction Amount"  FontSize="18"  FontAttributes="Bold"/>
+                <Label Grid.Row ="0" Grid.Column="1"  Text="Date"  FontSize="18" FontAttributes="Bold" />
+                <Label Grid.Row ="0"  Grid.Column="2"  Text="Description"  FontSize="18" FontAttributes="Bold"/>
+            </Grid>
+
+
+            <ListView x:Name="InclistView" FlexLayout.Grow="1" HasUnevenRows="True"  >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell >
+                            <VerticalStackLayout >
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="300"  />
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="300"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0"  Text="{Binding TransactionAmount, StringFormat= '{0:C}' }"   FontSize="12"  FontAttributes="Bold"/>
+                                    <Label Grid.Column="1"  Text="{Binding Datum, StringFormat= '{0:d}'}"  FontSize="12" FontAttributes="Bold" />
+                                    <Label Grid.Column="2"  Text="{Binding Description}"  FontSize="12" FontAttributes="Bold"/>
+                                </Grid>
+                            </VerticalStackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

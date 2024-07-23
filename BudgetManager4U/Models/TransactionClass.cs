@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 
 
-namespace TransactionScheduler.Models;
+namespace BudgetManager4U.Models;
 [Table("transactions")]
 
 public class TransactionClass

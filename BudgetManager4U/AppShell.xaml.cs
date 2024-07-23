@@ -8,10 +8,9 @@ namespace BudgetManager4U
         {
             InitializeComponent();
             //Register all routes
-            Routing.RegisterRoute("loginpage", typeof(LoginPage));
-            Routing.RegisterRoute("signuppage", typeof(SignUpPage));
             Routing.RegisterRoute("mainpage", typeof(MainPage));
-            Routing.RegisterRoute("useraccountpage", typeof(UserAccountPage));
+            Routing.RegisterRoute("expensespage", typeof(ExpensesPage));
+            Routing.RegisterRoute("incomespage", typeof(IncomesPage));
         }
     }
 }
