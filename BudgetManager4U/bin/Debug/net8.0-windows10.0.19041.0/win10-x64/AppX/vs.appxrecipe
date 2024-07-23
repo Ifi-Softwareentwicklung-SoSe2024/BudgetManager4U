@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-23T20:10:27.501</Modified>
+      <Modified>2024-07-23T22:10:23.573</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-23T20:10:27.230</Modified>
+      <Modified>2024-07-23T22:06:55.871</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetManager4U.runtimeconfig.json">
       <PackagePath>BudgetManager4U.runtimeconfig.json</PackagePath>
-      <Modified>2024-07-23T20:10:26.767</Modified>
+      <Modified>2024-07-23T22:06:55.529</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetManager4U.dll">
       <PackagePath>BudgetManager4U.dll</PackagePath>
-      <Modified>2024-07-23T20:10:25.118</Modified>
+      <Modified>2024-07-23T22:10:22.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>BudgetManager4U.exe</PackagePath>
-      <Modified>2024-07-23T20:10:25.161</Modified>
+      <Modified>2024-07-23T22:10:22.390</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -55,71 +55,51 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\goldpouchSplashScreen.scale-100.png">
       <PackagePath>goldpouchSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-07-23T19:57:39.365</Modified>
+      <Modified>2024-07-23T20:27:23.609</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\goldpouchSplashScreen.scale-125.png">
       <PackagePath>goldpouchSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-07-23T19:57:39.384</Modified>
+      <Modified>2024-07-23T20:27:23.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\goldpouchSplashScreen.scale-150.png">
       <PackagePath>goldpouchSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-07-23T19:57:39.414</Modified>
+      <Modified>2024-07-23T20:27:23.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\goldpouchSplashScreen.scale-200.png">
       <PackagePath>goldpouchSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-07-23T19:57:39.449</Modified>
+      <Modified>2024-07-23T20:27:23.688</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\goldpouchSplashScreen.scale-400.png">
       <PackagePath>goldpouchSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-07-23T19:57:39.557</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
-      <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-07-23T19:21:06.401</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
-      <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-07-23T19:21:06.411</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
-      <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-07-23T19:21:06.412</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
-      <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-07-23T19:21:06.412</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
-      <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-07-23T19:21:06.412</Modified>
+      <Modified>2024-07-23T20:27:23.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2024-07-23T19:21:06.332</Modified>
+      <Modified>2024-07-23T19:20:58.129</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2024-07-23T19:21:06.332</Modified>
+      <Modified>2024-07-23T19:20:58.129</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-07-23T19:57:42.112</Modified>
+      <Modified>2024-07-23T20:27:25.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-07-23T19:57:42.122</Modified>
+      <Modified>2024-07-23T20:27:25.119</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-07-23T19:57:42.133</Modified>
+      <Modified>2024-07-23T20:27:25.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-07-23T19:57:42.150</Modified>
+      <Modified>2024-07-23T20:27:25.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-07-23T19:57:42.216</Modified>
+      <Modified>2024-07-23T20:27:25.214</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\goldpouch.ico">
       <PackagePath>goldpouch.ico</PackagePath>
@@ -307,7 +287,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetManager4U.deps.json">
       <PackagePath>BudgetManager4U.deps.json</PackagePath>
-      <Modified>2024-07-23T20:10:26.609</Modified>
+      <Modified>2024-07-23T22:06:55.416</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
