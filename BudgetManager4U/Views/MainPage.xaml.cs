@@ -68,10 +68,7 @@ public partial class MainPage : ContentPage
         List<TransactionClass> transactions = await GetTransactionsAsync();
 
         string fileName = $"Transactions_{DateTime.Now:yyyyMMdd}.csv";
-#if ANDROID
 
-        string filePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
-#endif  
         string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), fileName);
         CsvWriter.WriteTransactionsToCsv(transactions, filePath);
 
