@@ -25,7 +25,7 @@ public class LocalDbService
     public async Task<List<TransactionClass>> GetTransactions()
     {
 
-        return await _connection.Table<TransactionClass>().ToListAsync();
+        return await _connection.Table<TransactionClass>().OrderBy(x => x.Datum).ToListAsync();
 
 
     }
@@ -42,7 +42,7 @@ public class LocalDbService
     public async Task<List<TransactionClass>> GetExpenses()
     {
 
-        return await _connection.Table<TransactionClass>().Where(x => x.TransactionAmount < 0).ToListAsync();
+        return await _connection.Table<TransactionClass>().Where(x => x.TransactionAmount < 0).OrderBy(x => x.Datum).ToListAsync();
 
 
 
@@ -51,21 +51,21 @@ public class LocalDbService
     public async Task<List<TransactionClass>> GetIncomes()
     {
 
-        return await _connection.Table<TransactionClass>().Where(x => x.TransactionAmount > 0).ToListAsync();
+        return await _connection.Table<TransactionClass>().Where(x => x.TransactionAmount > 0).OrderBy(x=>x.Datum).OrderBy(x => x.Datum).ToListAsync();
 
 
 
     }
     public async Task<List<TransactionClass>> GetExpensesByDate(DateTime dateFrom, DateTime dateTo)
     {
-        return await _connection.Table<TransactionClass>().Where(x => (x.Datum >= dateFrom & x.Datum <= dateTo &x.TransactionAmount<0)).ToListAsync();
+        return await _connection.Table<TransactionClass>().Where(x => (x.Datum >= dateFrom & x.Datum <= dateTo &x.TransactionAmount<0)).OrderBy(x => x.Datum).ToListAsync();
 
     }
 
 
-    public async Task<List<TransactionClass>> GetTransactionsByDate(DateTime dateFrom, DateTime dateTo)
+    public async Task<List<TransactionClass>> GetIncomesByDate(DateTime dateFrom, DateTime dateTo)
     {
-        return await _connection.Table<TransactionClass>().Where(x =>(x.Datum >= dateFrom & x.Datum <= dateTo)).ToListAsync();
+        return await _connection.Table<TransactionClass>().Where(x =>(x.Datum >= dateFrom & x.Datum <= dateTo & x.TransactionAmount > 0)).ToListAsync();
        
     }
     public async Task AddTransaction(TransactionClass transaction)
