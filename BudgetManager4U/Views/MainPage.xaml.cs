@@ -65,8 +65,8 @@ public partial class MainPage : ContentPage
     }
     private async void OnSaveCsvButtonClicked(object sender, EventArgs e)
     {
-        List<TransactionClass> transactions = await GetTransactionsAsync();
-
+        //List<TransactionClass> transactions = await _dbService.GetTransactionsAsync();
+        List<TransactionClass> transactions = await _dbService.GetTransactions();
         string fileName = $"Transactions_{DateTime.Now:yyyyMMdd}.csv";
 
         string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), fileName);
@@ -75,10 +75,7 @@ public partial class MainPage : ContentPage
         await DisplayAlert("CSV Saved", $"CSV file has been saved to: {filePath}", "OK");
     }
 
-    private Task<List<TransactionClass>> GetTransactionsAsync()
-    {
-        return App.Database.GetTransactions();
-    }
+   
 
     private async void OnExpenseClicked(object sender, EventArgs e)
     {

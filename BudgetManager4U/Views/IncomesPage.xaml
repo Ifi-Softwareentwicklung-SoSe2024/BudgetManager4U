@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BudgetManager4U.Views.IncomesPage"
              Title="Incomes">
-    <ScrollView BackgroundColor="LightGreen">
+    <ScrollView >
         <FlexLayout Direction="Column">
-            <Grid >
+            <Grid BackgroundColor="Beige" >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"  />
+                    <RowDefinition Height="20"  />
+                    <RowDefinition Height="100"  />
+                    <RowDefinition Height="30"  />
 
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -16,15 +18,21 @@
                     <ColumnDefinition Width="300"/>
 
                 </Grid.ColumnDefinitions>
+                <Label Grid.Row ="0" Grid.Column="0"  Text="Select Day From"  FontSize="12" FontAttributes="Bold" />
+                <Label Grid.Row ="0"  Grid.Column="1"  Text="Select Day To"  FontSize="12" FontAttributes="Bold"/>
+                <DatePicker x:Name="dayFrom" Grid.Row ="1" Grid.Column="0"   />
+                <DatePicker x:Name="dayTo" Grid.Row ="1" Grid.Column="1"  />
+                <Button x:Name="filterByDate"  Text="Filter by Date" Clicked="OnFilterClicked"  Grid.Row ="1"  Grid.Column="2"  />
 
 
-                <Label Grid.Row ="0" Grid.Column="0"  Text="Transaction Amount"  FontSize="18"  FontAttributes="Bold"/>
-                <Label Grid.Row ="0" Grid.Column="1"  Text="Date"  FontSize="18" FontAttributes="Bold" />
-                <Label Grid.Row ="0"  Grid.Column="2"  Text="Description"  FontSize="18" FontAttributes="Bold"/>
+                <Label Grid.Row ="2" Grid.Column="0"  Text="Transaction Amount"  FontSize="18"  FontAttributes="Bold"/>
+                <Label Grid.Row ="2" Grid.Column="1"  Text="Date"  FontSize="18" FontAttributes="Bold" />
+                <Label Grid.Row ="2"  Grid.Column="2"  Text="Description"  FontSize="18" FontAttributes="Bold"/>
+
             </Grid>
 
 
-            <ListView x:Name="InclistView" FlexLayout.Grow="1" HasUnevenRows="True"  >
+            <ListView x:Name="InclistView" FlexLayout.Grow="1" HasUnevenRows="True" BackgroundColor="LightGreen"  >
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
