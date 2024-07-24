@@ -3,6 +3,7 @@
 using BudgetManager4U.Services;
 using BudgetManager4U.Models;
 using System.Collections.ObjectModel;
+using System.Reflection.Metadata;
 
 namespace BudgetManager4U.Views;
 
@@ -19,6 +20,13 @@ public partial class MainPage : ContentPage
         Task.Run(async () => balanceLabel.Text = await _dbService.GetBalance());
 
     }
+    /* summary:
+     * constructor  
+     * 
+     * Initalizaties the component and assgins '_dbServices' to provided 'LocalDbService' instance
+     * 
+     * Data Loading asynchronically and sets transaction list and balance upon initializaion
+     */
 
     private async void OnIncomeClicked(object sender, EventArgs e)
     {
@@ -63,6 +71,18 @@ public partial class MainPage : ContentPage
         finally { Console.WriteLine(""); }
 
     }
+    /* summary:
+     * method, that handles the click event for adding an 
+     * income transaction   
+     * 
+     * if 'editTransactionId' = 0, add a new expense transaction with negative amount
+     * if '_editTransactionId_ not '0', update an existing transaction
+     * 
+     * Data Refresh: clears input fields and updates an existing transaction
+     */
+
+
+
     private async void OnSaveCsvButtonClicked(object sender, EventArgs e)
     {
         //List<TransactionClass> transactions = await _dbService.GetTransactionsAsync();
@@ -75,7 +95,16 @@ public partial class MainPage : ContentPage
         await DisplayAlert("CSV Saved", $"CSV file has been saved to: {filePath}", "OK");
     }
 
-   
+    /* summary:
+     * method, that handles the click event for saving transactions to CSV file   * 
+     * 
+     * Creates a timestamped CSV file in the Documents folder and stores transaction data using CsvWriter
+     * 
+     * Displays a notification indicating that the CSV file has been saved and the file path
+     */
+
+
+
 
     private async void OnExpenseClicked(object sender, EventArgs e)
     {
@@ -119,6 +148,15 @@ public partial class MainPage : ContentPage
         finally { Console.WriteLine(""); }
     }
 
+    /* summary:
+     * handles the click event for adding an expense transaction   * 
+     * 
+     * if 'editTransactionId' = 0, add a new expense transaction with negative amount
+     * if '_editTransactionId_ not '0', update an existing transaction
+     * 
+     * Data Refresh: clears input fields and updates an existing transaction
+     */
+
 
     public async void OnlistViewTapped(object sender, ItemTappedEventArgs e)
     {
@@ -144,5 +182,14 @@ public partial class MainPage : ContentPage
 
 
     }
+
+    /* summary:
+     * handles the tapping event on an item in the list view   * 
+     * 
+     * Action Sheet: Displays options to edit or delete the tapped transaction
+     *               handles Edit/Delete
+     *               
+     * Error handling
+     */
 
 }
