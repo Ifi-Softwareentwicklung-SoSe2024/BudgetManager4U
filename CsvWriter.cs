@@ -8,9 +8,9 @@ public static class CsvWriter
     /// <summary>
     ///  method to formate and write transactions into a CSV file
     /// </summary>
-    /// <param name="transactions"></param>
-    /// <param name="filePath"></param>
-    /// <returns></returns>
+    /// <param name="transactions">List of TransactionClass instanses</param>
+    /// <param name="filePath">string variable, containing path to the directory </param>
+    /// <returns> void </returns>
 
     public static void WriteTransactionsToCsv(List<TransactionClass> transactions, string filePath)
     {
