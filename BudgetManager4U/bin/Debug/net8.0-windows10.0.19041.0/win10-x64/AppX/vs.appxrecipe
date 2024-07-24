@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-23T22:10:23.573</Modified>
+      <Modified>2024-07-24T08:09:30.670</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-23T22:06:55.871</Modified>
+      <Modified>2024-07-24T08:07:33.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetManager4U.runtimeconfig.json">
       <PackagePath>BudgetManager4U.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetManager4U.dll">
       <PackagePath>BudgetManager4U.dll</PackagePath>
-      <Modified>2024-07-23T22:10:22.358</Modified>
+      <Modified>2024-07-24T08:09:30.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>BudgetManager4U.exe</PackagePath>
-      <Modified>2024-07-23T22:10:22.390</Modified>
+      <Modified>2024-07-24T08:09:30.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

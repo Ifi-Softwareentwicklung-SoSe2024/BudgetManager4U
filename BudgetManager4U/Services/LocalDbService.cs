@@ -38,7 +38,7 @@ public class LocalDbService
         var balance = transactions.Sum(x => x.TransactionAmount).ToString("C", culture);
         return balance;
     }
-
+  
     public async Task<List<TransactionClass>> GetExpenses()
     {
 
@@ -56,12 +56,17 @@ public class LocalDbService
 
 
     }
-
-
-
-    public async Task<TransactionClass> GetTransaction(int TransactionId)
+    public async Task<List<TransactionClass>> GetExpensesByDate(DateTime dateFrom, DateTime dateTo)
     {
-        return await _connection.Table<TransactionClass>().Where(x => x.Id == TransactionId).FirstOrDefaultAsync();
+        return await _connection.Table<TransactionClass>().Where(x => (x.Datum >= dateFrom & x.Datum <= dateTo &x.TransactionAmount<0)).ToListAsync();
+
+    }
+
+
+    public async Task<List<TransactionClass>> GetTransactionsByDate(DateTime dateFrom, DateTime dateTo)
+    {
+        return await _connection.Table<TransactionClass>().Where(x =>(x.Datum >= dateFrom & x.Datum <= dateTo)).ToListAsync();
+       
     }
     public async Task AddTransaction(TransactionClass transaction)
     {

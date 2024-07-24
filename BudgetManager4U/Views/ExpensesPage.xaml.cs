@@ -11,6 +11,12 @@ public partial class ExpensesPage : ContentPage
         _dbService = dbService;
        
     }
+    private async void OnFilterClicked(object sender, EventArgs e)
+    {
+        ExplistView.ItemsSource = await _dbService.GetExpensesByDate(dayFrom.Date, dayTo.Date);
+
+
+    }
 
     protected override async void OnAppearing()
     {
