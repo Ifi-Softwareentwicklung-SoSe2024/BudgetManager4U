@@ -1,5 +1,3 @@
-
-
 using BudgetManager4U.Services;
 using BudgetManager4U.Models;
 using System.Collections.ObjectModel;
@@ -12,6 +10,12 @@ public partial class MainPage : ContentPage
     private readonly LocalDbService _dbService;
     private int _editTransactionId;
 
+
+    /// <summary>
+    ///  constructor, Initalizaties the component and assgins '_dbServices' to provided 'LocalDbService' instance
+    /// </summary>
+    /// <param name="main"></param>
+    /// <returns></returns>
     public MainPage(LocalDbService dbService)
     {
         InitializeComponent();
@@ -20,13 +24,13 @@ public partial class MainPage : ContentPage
         Task.Run(async () => balanceLabel.Text = await _dbService.GetBalance());
 
     }
-    /* summary:
-     * constructor  
-     * 
-     * Initalizaties the component and assgins '_dbServices' to provided 'LocalDbService' instance
-     * 
-     * Data Loading asynchronically and sets transaction list and balance upon initializaion
-     */
+
+
+    /// <summary>
+    ///  handles the click even for adding an income transaction
+    /// </summary>
+    /// <param name="main"></param>
+    /// <returns></returns>
 
     private async void OnIncomeClicked(object sender, EventArgs e)
     {
@@ -71,18 +75,14 @@ public partial class MainPage : ContentPage
         finally { Console.WriteLine(""); }
 
     }
-    /* summary:
-     * method, that handles the click event for adding an 
-     * income transaction   
-     * 
-     * if 'editTransactionId' = 0, add a new expense transaction with negative amount
-     * if '_editTransactionId_ not '0', update an existing transaction
-     * 
-     * Data Refresh: clears input fields and updates an existing transaction
-     */
 
 
-
+    /// <summary>
+    ///  handles the click even for saving transactions to CSV file
+    /// </summary>
+    /// <param name="main"></param>
+    /// <returns></returns>
+    
     private async void OnSaveCsvButtonClicked(object sender, EventArgs e)
     {
         //List<TransactionClass> transactions = await _dbService.GetTransactionsAsync();
@@ -95,16 +95,12 @@ public partial class MainPage : ContentPage
         await DisplayAlert("CSV Saved", $"CSV file has been saved to: {filePath}", "OK");
     }
 
-    /* summary:
-     * method, that handles the click event for saving transactions to CSV file   * 
-     * 
-     * Creates a timestamped CSV file in the Documents folder and stores transaction data using CsvWriter
-     * 
-     * Displays a notification indicating that the CSV file has been saved and the file path
-     */
 
-
-
+    /// <summary>
+    ///  handles the click even for adding an epense transaction
+    /// </summary>
+    /// <param name="main"></param>
+    /// <returns></returns>
 
     private async void OnExpenseClicked(object sender, EventArgs e)
     {
@@ -148,15 +144,12 @@ public partial class MainPage : ContentPage
         finally { Console.WriteLine(""); }
     }
 
-    /* summary:
-     * handles the click event for adding an expense transaction   * 
-     * 
-     * if 'editTransactionId' = 0, add a new expense transaction with negative amount
-     * if '_editTransactionId_ not '0', update an existing transaction
-     * 
-     * Data Refresh: clears input fields and updates an existing transaction
-     */
 
+    /// <summary>
+    ///  handles the tapping even on an item in the list view
+    /// </summary>
+    /// <param name="main"></param>
+    /// <returns></returns>
 
     public async void OnlistViewTapped(object sender, ItemTappedEventArgs e)
     {
@@ -183,13 +176,6 @@ public partial class MainPage : ContentPage
 
     }
 
-    /* summary:
-     * handles the tapping event on an item in the list view   * 
-     * 
-     * Action Sheet: Displays options to edit or delete the tapped transaction
-     *               handles Edit/Delete
-     *               
-     * Error handling
-     */
+    
 
 }
