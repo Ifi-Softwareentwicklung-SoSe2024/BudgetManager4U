@@ -15,7 +15,7 @@ This application not only assists in tracking your cash flow by recording expens
 The structure of the proposed app is presented on the UML diagram.
 <br>
 <br>
-![My Diagram](uml.drawio.png)
+![My Diagram](ProjectUML.drawio.png)
 <br>
 
 ## Instructions / User Guide
