@@ -9,7 +9,7 @@ public static class CsvWriter
     ///  method to formate and write transactions into a CSV file
     /// </summary>
     /// <param name="transactions"></param>
-    /// <param name="fielPath"></param>
+    /// <param name="filePath"></param>
     /// <returns></returns>
 
     public static void WriteTransactionsToCsv(List<TransactionClass> transactions, string filePath)
