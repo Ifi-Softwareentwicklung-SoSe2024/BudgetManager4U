@@ -9,8 +9,9 @@ As part of the final project for the Software Development course in Summer Semes
 
 developed the project "BudgetManager4U."
 ## Project Aim
-The goal of this project is to explore MAUI.NET and demonstrate some essential CRUD-operations which are a cornerstone of modern apps which rely on databases as a storage. On top of that, it is often handy to make use of available data export options, which export given data into one of the most common file formats like csv-file. These are frequently used for further processing, e.g statistical inference/summary or data analysis in the external apps/environments. 
+The goal of this project is to explore MAUI.NET and demonstrate some essential CRUD-operations that are a cornerstone of modern apps which rely on databases for storage. On top of that, it is often handy to make use of available data export options, which export the given data into one of the most common file formats, such as a csv-file. These are frequently used for further processing, e.g statistical inference/summary or data analysis in the external apps/environments. 
 Also note, that despite MAUI.NET is "cross-platform", this app targets Windows platform.
+
 ## Used Packages/Technologies
 There exist many available options for development of applications with similar functionality, e.g. CRUD Systems.
 We used the following technological stack to develope this application:
@@ -22,21 +23,21 @@ We used the following technological stack to develope this application:
 3. **LINQ**. LINQ is one of the most common tool for collection manipulation, e.g filtering, ordering, grouping operation in .NET. In this application it is used in combination with the output of basic CRUD operations to produce more sophisticated results.
 
 ## Application Design
-The modern enterpise applications are developed according to according to MVP following patterns like Model-View-Control(MVC), Model-View-ViewModel(MVVM) and Model-View-Update(MVU), which allow to decouple business logic, data(model) and presenation(view). This is crucial for very large and complex applications consisting of many models, services and makes easier maintainabilty and testing. This is considered to be a standard and best practice in the industry.
+The modern enterpise applications are developed according to MVP following patterns like Model-View-Control(MVC), Model-View-ViewModel(MVVM) and Model-View-Update(MVU), which allow to decouple business logic, data(model) and presenation(view). This is crucial for very large and complex applications consisting of many models, services and makes easier maintainabilty and testing. This is considered to be a standard and best practice in the industry.
 
-Despite aforementioned benefits, we do not follow this concept due to the simple structure of the project but still achieve some grade of decoupling. Indeed, it contains only one model, one service(which could be also atomized in future), and 3 view pages.
+Despite aforementioned benefits, we do not follow this concept above, due to the simple structure of the project, but still achieve some grade of decoupling. Indeed, it contains only one model, one service(which could be also atomized in future), and 3 view pages.
 
 ## Implementation
 This application serves as a finance tracker/budget manager/transaction scheduler. One can insert/edit/delete/get transactions(expense/income) by filling data in entry/editor of the main page and display them on three pages(views). 
 
 
-The first page is main page of the application, it displays the complete transaction history and the current balance, besides the controls and fields of the form for the editing and creating transaction.
+The first page is the main page of the application, it displays the complete transaction history and the current balance, besides the controls and fields of the form for the editing and creating transaction.
 The view for expenses displays only transactions with negative values. Furthermore, it is possible to filter transactions by date.
 Finally, the view for incomes displays only transactions with positive values, which can be similarly filtered by date.
 
 
-Project  has only one model class: TransactionClass class, whose properties are also columns for the table "Transactions" created and manipulated by LocalDbService.
-The LocalDbService is an essential component of this application, as it creates data base, table "Transactions" and performs data manipulations.
+The project has only one model class: TransactionClass class, whose properties are also columns for the table "Transactions" created and manipulated by LocalDbService.
+The LocalDbService is an essential component of this application, as it creates the database, the table "Transactions" and performs data manipulations.
 Finally, the CSVWriter class enables the export of the transaction history stored in the data base instance.
 
 ## Class Diagram
