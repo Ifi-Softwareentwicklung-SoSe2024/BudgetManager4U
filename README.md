@@ -4,16 +4,12 @@ Modul: SWE
 
 As part of the final project for the Software Development course in Summer Semester 2024, the following individuals:
 
-Konstantin Ibadullaev
-Carl Reemt Alf Schwaten
+* Konstantin Ibadullaev
+* Carl Reemt Alf Schwaten
 
 developed the project "BudgetManager4U."
 
 This application not only assists in tracking your cash flow by recording expenses and income but also provides a basic statistical summary. Additionally, it allows for the export of data in CSV format for further processing and compatibility with other software solutions.
-
-## Description
-This is a budget planner for the module "Softwareentwicklung 2024". 
-<br>
 
 ## Structure
 The structure of the proposed app is presented on the UML diagram.
