@@ -30,3 +30,6 @@ To add an expense, such as a weekly trip to the supermarket costing €150.34, e
 
 **Editing / Deleting a Transaction:**
 If there are any errors in the transaction entry, or if an entry needs to be deleted, this can be done by clicking on the transaction in question. A window will appear with the options 'Edit', 'Delete' or 'Cancel'. Selecting "Edit" will reopen the transaction in the input fields at the top, where it can be modified as required. Selecting 'Delete' will remove the transaction permanently. If no changes are required, the transaction can be cancelled by selecting 'Cancel'.
+
+**CSV Export:**
+BudgetManager4U also allows you to export data in CSV format for further processing and compatibility with other software solutions. All you need to do is click on the grey 'Export as CSV' button. This will automatically save the transactions to a CSV file and display a confirmation and the location of the file.
