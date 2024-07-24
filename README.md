@@ -2,6 +2,15 @@
 Matriculation No.: 65368, 63072 <br>
 Modul: SWE
 
+As part of the final project for the Software Development course in Summer Semester 2024, the following individuals:
+
+Konstantin Ibadullaev
+Carl Reemt Alf Schwaten
+
+developed the project "BudgetManager4U."
+
+This application not only assists in tracking your cash flow by recording expenses and income but also provides a basic statistical summary. Additionally, it allows for the export of data in CSV format for further processing and compatibility with other software solutions.
+
 ## Description
 This is a budget planner for the module "Softwareentwicklung 2024". 
 <br>
@@ -12,9 +21,6 @@ The structure of the proposed app is presented on the UML diagram.
 <br>
 ![My Diagram](uml.drawio.png)
 <br>
-## Functionality
-This app will help you not only to track your cashflow by registering expenses and income, but also provide with some basic statistical summary.
-Furthermore, it enables the export of the data in csv for further processing and compatibility with other software solutions.
 
 ## Instructions / User Guide
 When the BudgetManager4U application is launched, a window opens showing the user's personal account. Here the user can monitor and manage their transactions, including both income and expenses. The following steps illustrate the process using an example income (salary) entry:
