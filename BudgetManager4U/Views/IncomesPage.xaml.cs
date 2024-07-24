@@ -15,7 +15,7 @@ public partial class IncomesPage : ContentPage
     }
     private async void OnFilterClicked(object sender, EventArgs e)
     {
-        InclistView.ItemsSource = await _dbService.GetExpensesByDate(dayFrom.Date, dayTo.Date);
+        InclistView.ItemsSource = await _dbService.GetIncomesByDate(dayFrom.Date, dayTo.Date);
 
 
     }
