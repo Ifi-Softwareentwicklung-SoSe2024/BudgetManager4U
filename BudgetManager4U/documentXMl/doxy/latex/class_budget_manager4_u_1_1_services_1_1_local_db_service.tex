@@ -1,0 +1,196 @@
+\doxysection{Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service Class Reference}
+\hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service}{}\label{class_budget_manager4_u_1_1_services_1_1_local_db_service}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+
+
+Database service of the class {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} for the data manipulation.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_a10eae9faa3ca4d74cb73721283650ef3}\label{class_budget_manager4_u_1_1_services_1_1_local_db_service_a10eae9faa3ca4d74cb73721283650ef3} 
+{\bfseries Local\+Db\+Service} ()
+\begin{DoxyCompactList}\small\item\em Constuctor of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service. \end{DoxyCompactList}\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ \mbox{\hyperlink{class_budget_manager4_u_1_1_services_1_1_local_db_service_a3bc66053f3531d886ef5549add1677b0}{Get\+Transactions}} ()
+\begin{DoxyCompactList}\small\item\em Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all records from the table "{}\+Transactions"{} in the ascending order(by date) \end{DoxyCompactList}\item 
+async Task$<$ string?$>$ \mbox{\hyperlink{class_budget_manager4_u_1_1_services_1_1_local_db_service_aabdbf510f895126f331e70b7cd7b6b63}{Get\+Balance}} ()
+\begin{DoxyCompactList}\small\item\em Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving the current balance. \end{DoxyCompactList}\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ \mbox{\hyperlink{class_budget_manager4_u_1_1_services_1_1_local_db_service_a0dcd405faa44e139b6a44ede71f24cb0}{Get\+Expenses}} ()
+\begin{DoxyCompactList}\small\item\em Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all expenses from the table "{}\+Transactions"{} in ascending order (by date) \end{DoxyCompactList}\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ \mbox{\hyperlink{class_budget_manager4_u_1_1_services_1_1_local_db_service_af5777cfb6c82721e77a3530681b02c98}{Get\+Incomes}} ()
+\begin{DoxyCompactList}\small\item\em Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all incomes from the table "{}\+Transactions"{} in the ascending order(by date) \end{DoxyCompactList}\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ \mbox{\hyperlink{class_budget_manager4_u_1_1_services_1_1_local_db_service_af802ae0b1c04f8e1f57d030239733243}{Get\+Expenses\+By\+Date}} (Date\+Time date\+From, Date\+Time date\+To)
+\begin{DoxyCompactList}\small\item\em Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all expenses from the table "{}\+Transactions"{} in the ascending order(by date) within the defined period. \end{DoxyCompactList}\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ \mbox{\hyperlink{class_budget_manager4_u_1_1_services_1_1_local_db_service_a6faa63cb39da7e90fa3b4aabd850f87b}{Get\+Incomes\+By\+Date}} (Date\+Time date\+From, Date\+Time date\+To)
+\begin{DoxyCompactList}\small\item\em Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all incomes from the table "{}\+Transactions"{} in the ascending order(by date) within the defined period. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_budget_manager4_u_1_1_services_1_1_local_db_service_a8a656d467d5839f1bfca29a9859f621b}{Add\+Transaction}} (\mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} transaction)
+\begin{DoxyCompactList}\small\item\em Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for inserting the transaction record in the database. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_budget_manager4_u_1_1_services_1_1_local_db_service_a523ea81f556d45663a325585f88efd53}{Update\+Transaction}} (\mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} transaction)
+\begin{DoxyCompactList}\small\item\em Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for updating the transaction record in the database. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_budget_manager4_u_1_1_services_1_1_local_db_service_a1ae8d42e92d506c4c30df846f6c49ad9}{Delete\+Transaction}} (\mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} transaction)
+\begin{DoxyCompactList}\small\item\em Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for deleting the transaction record from the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Database service of the class {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} for the data manipulation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_a8a656d467d5839f1bfca29a9859f621b}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}!AddTransaction@{AddTransaction}}
+\index{AddTransaction@{AddTransaction}!BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+\doxysubsubsection{\texorpdfstring{AddTransaction()}{AddTransaction()}}
+{\footnotesize\ttfamily \label{class_budget_manager4_u_1_1_services_1_1_local_db_service_a8a656d467d5839f1bfca29a9859f621b} 
+async Task Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service.\+Add\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}}}]{transaction}{}\end{DoxyParamCaption})}
+
+
+
+Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for inserting the transaction record in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transaction} & transaction of the Transaction\+Class \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown when the arguments are invalid. \\
+\hline
+\end{DoxyExceptions}
+/// 
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown when the unknown failure occurs \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_a1ae8d42e92d506c4c30df846f6c49ad9}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}!DeleteTransaction@{DeleteTransaction}}
+\index{DeleteTransaction@{DeleteTransaction}!BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+\doxysubsubsection{\texorpdfstring{DeleteTransaction()}{DeleteTransaction()}}
+{\footnotesize\ttfamily \label{class_budget_manager4_u_1_1_services_1_1_local_db_service_a1ae8d42e92d506c4c30df846f6c49ad9} 
+async Task Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service.\+Delete\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}}}]{transaction}{}\end{DoxyParamCaption})}
+
+
+
+Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for deleting the transaction record from the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transaction} & transaction of the Transaction\+Class \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_aabdbf510f895126f331e70b7cd7b6b63}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}!GetBalance@{GetBalance}}
+\index{GetBalance@{GetBalance}!BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+\doxysubsubsection{\texorpdfstring{GetBalance()}{GetBalance()}}
+{\footnotesize\ttfamily \label{class_budget_manager4_u_1_1_services_1_1_local_db_service_aabdbf510f895126f331e70b7cd7b6b63} 
+async Task$<$ string?$>$ Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service.\+Get\+Balance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving the current balance. 
+
+\begin{DoxyReturn}{Returns}
+The string value of the current balance 
+\end{DoxyReturn}
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_a0dcd405faa44e139b6a44ede71f24cb0}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}!GetExpenses@{GetExpenses}}
+\index{GetExpenses@{GetExpenses}!BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+\doxysubsubsection{\texorpdfstring{GetExpenses()}{GetExpenses()}}
+{\footnotesize\ttfamily \label{class_budget_manager4_u_1_1_services_1_1_local_db_service_a0dcd405faa44e139b6a44ede71f24cb0} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service.\+Get\+Expenses (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all expenses from the table "{}\+Transactions"{} in ascending order (by date) 
+
+\begin{DoxyReturn}{Returns}
+The filtered list of the Transaction\+Class
+\end{DoxyReturn}
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_af802ae0b1c04f8e1f57d030239733243}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}!GetExpensesByDate@{GetExpensesByDate}}
+\index{GetExpensesByDate@{GetExpensesByDate}!BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+\doxysubsubsection{\texorpdfstring{GetExpensesByDate()}{GetExpensesByDate()}}
+{\footnotesize\ttfamily \label{class_budget_manager4_u_1_1_services_1_1_local_db_service_af802ae0b1c04f8e1f57d030239733243} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service.\+Get\+Expenses\+By\+Date (\begin{DoxyParamCaption}\item[{Date\+Time}]{date\+From}{, }\item[{Date\+Time}]{date\+To}{}\end{DoxyParamCaption})}
+
+
+
+Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all expenses from the table "{}\+Transactions"{} in the ascending order(by date) within the defined period. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+From} & Starting date of Date\+Time type\\
+\hline
+{\em date\+To} & Starting date of Date\+Time type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The filtered list of the Transaction\+Class
+\end{DoxyReturn}
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_af5777cfb6c82721e77a3530681b02c98}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}!GetIncomes@{GetIncomes}}
+\index{GetIncomes@{GetIncomes}!BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+\doxysubsubsection{\texorpdfstring{GetIncomes()}{GetIncomes()}}
+{\footnotesize\ttfamily \label{class_budget_manager4_u_1_1_services_1_1_local_db_service_af5777cfb6c82721e77a3530681b02c98} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service.\+Get\+Incomes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all incomes from the table "{}\+Transactions"{} in the ascending order(by date) 
+
+\begin{DoxyReturn}{Returns}
+The filtered list of the Transaction\+Class
+\end{DoxyReturn}
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_a6faa63cb39da7e90fa3b4aabd850f87b}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}!GetIncomesByDate@{GetIncomesByDate}}
+\index{GetIncomesByDate@{GetIncomesByDate}!BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+\doxysubsubsection{\texorpdfstring{GetIncomesByDate()}{GetIncomesByDate()}}
+{\footnotesize\ttfamily \label{class_budget_manager4_u_1_1_services_1_1_local_db_service_a6faa63cb39da7e90fa3b4aabd850f87b} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service.\+Get\+Incomes\+By\+Date (\begin{DoxyParamCaption}\item[{Date\+Time}]{date\+From}{, }\item[{Date\+Time}]{date\+To}{}\end{DoxyParamCaption})}
+
+
+
+Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all incomes from the table "{}\+Transactions"{} in the ascending order(by date) within the defined period. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+From} & Starting date of Date\+Time type\\
+\hline
+{\em date\+To} & Starting date of Date\+Time type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The filtered list of the Transaction\+Class
+\end{DoxyReturn}
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_a3bc66053f3531d886ef5549add1677b0}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}!GetTransactions@{GetTransactions}}
+\index{GetTransactions@{GetTransactions}!BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+\doxysubsubsection{\texorpdfstring{GetTransactions()}{GetTransactions()}}
+{\footnotesize\ttfamily \label{class_budget_manager4_u_1_1_services_1_1_local_db_service_a3bc66053f3531d886ef5549add1677b0} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}} $>$ $>$ Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service.\+Get\+Transactions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for retrieving all records from the table "{}\+Transactions"{} in the ascending order(by date) 
+
+\begin{DoxyReturn}{Returns}
+The list of the Transaction\+Class sorted by date
+\end{DoxyReturn}
+\Hypertarget{class_budget_manager4_u_1_1_services_1_1_local_db_service_a523ea81f556d45663a325585f88efd53}\index{BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}!UpdateTransaction@{UpdateTransaction}}
+\index{UpdateTransaction@{UpdateTransaction}!BudgetManager4U.Services.LocalDbService@{BudgetManager4U.Services.LocalDbService}}
+\doxysubsubsection{\texorpdfstring{UpdateTransaction()}{UpdateTransaction()}}
+{\footnotesize\ttfamily \label{class_budget_manager4_u_1_1_services_1_1_local_db_service_a523ea81f556d45663a325585f88efd53} 
+async Task Budget\+Manager4\+U.\+Services.\+Local\+Db\+Service.\+Update\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_budget_manager4_u_1_1_models_1_1_transaction_class}{Transaction\+Class}}}]{transaction}{}\end{DoxyParamCaption})}
+
+
+
+Method of the {\ttfamily \doxylink{class_budget_manager4_u_1_1_services_1_1_local_db_service}{Local\+Db\+Service}} service for updating the transaction record in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transaction} & transaction of the Transaction\+Class \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown when the arguments are invalid. \\
+\hline
+{\em Exception} & Thrown when the unknown failure occurs \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Services/Local\+Db\+Service.\+cs\end{DoxyCompactItemize}
