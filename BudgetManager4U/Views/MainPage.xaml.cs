@@ -14,7 +14,7 @@ public partial class MainPage : ContentPage
     /// <summary>
     ///  constructor, Initalizaties the component and assgins '_dbServices' to provided 'LocalDbService' instance
     /// </summary>
-    /// <param name="main"></param>
+    /// <param name="dbService"></param>
     /// <returns></returns>
     public MainPage(LocalDbService dbService)
     {
@@ -29,7 +29,8 @@ public partial class MainPage : ContentPage
     /// <summary>
     ///  handles the click even for adding an income transaction
     /// </summary>
-    /// <param name="main"></param>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     /// <returns></returns>
 
     private async void OnIncomeClicked(object sender, EventArgs e)
@@ -80,7 +81,8 @@ public partial class MainPage : ContentPage
     /// <summary>
     ///  handles the click even for saving transactions to CSV file
     /// </summary>
-    /// <param name="main"></param>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     /// <returns></returns>
     
     private async void OnSaveCsvButtonClicked(object sender, EventArgs e)
@@ -99,7 +101,8 @@ public partial class MainPage : ContentPage
     /// <summary>
     ///  handles the click even for adding an epense transaction
     /// </summary>
-    /// <param name="main"></param>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     /// <returns></returns>
 
     private async void OnExpenseClicked(object sender, EventArgs e)
@@ -148,7 +151,8 @@ public partial class MainPage : ContentPage
     /// <summary>
     ///  handles the tapping even on an item in the list view
     /// </summary>
-    /// <param name="main"></param>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     /// <returns></returns>
 
     public async void OnlistViewTapped(object sender, ItemTappedEventArgs e)
