@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BudgetManager4U</name>
+    </assembly>
+    <members>
+        <member name="T:BudgetManager4U.Converters.ExpenseIncomeConverter">
+             <summary>
+            The helper class <c>ExpenseIncomeConverter</c> using the interface <c> IValueConverter</c>
+             </summary>
+        </member>
+        <member name="M:BudgetManager4U.Converters.ExpenseIncomeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+             <summary>
+            The method  class <c>ExpenseIncomeConverter</c> that changes background 
+            depening on <c>TransactionAmount</c> of the <c>Transactionclass</c> instance
+             </summary>
+             <param name="value"> value of TotalAmount </param>
+              <param name="targetType"> value of TotalAmount </param>
+             <param name="parameter"> Color of listview.item.backgroundcolor </param>
+             <param name="culture"> some culture info </param>
+             <returns>The Type of System.Colors</returns>
+        </member>
+        <member name="M:BudgetManager4U.Converters.ExpenseIncomeConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            neither used nor  implented
+            </summary>
+            <exception cref="T:System.NotImplementedException">
+            Thrown when the ConvertBack is not defined and implemented 
+            </exception>
+            <param name="value"> value of TotalAmount </param>
+             <param name="targetType"> value of TotalAmount </param>
+            <param name="parameter"> Color of listview.item.backgroundcolor </param>
+            <param name="culture"> some culture info </param>
+        </member>
+        <member name="T:BudgetManager4U.CsvWriter">
+            <summary>
+            Class  <c> CsvWriter</c> for formating and writing transactions into a CSV file
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.CsvWriter.WriteTransactionsToCsv(System.Collections.Generic.List{BudgetManager4U.Models.TransactionClass},System.String)">
+            <summary>
+             method to formate and write transactions into a CSV file
+            </summary>
+            <param name="transactions">List of TransactionClass instanses</param>
+            <param name="filePath">string variable, containing path to the directory </param>
+            <returns> void </returns>
+        </member>
+        <member name="T:BudgetManager4U.Models.TransactionClass">
+             <summary>
+            Model of the class <c>TransactionClass</c>
+             </summary>
+        </member>
+        <member name="P:BudgetManager4U.Models.TransactionClass.Id">
+            <value>
+            The <c>Id</c> property represents an Id 
+            for this instance.
+            </value>
+        </member>
+        <member name="P:BudgetManager4U.Models.TransactionClass.Datum">
+            <value>
+            The <c>Datum</c> property represents an transaction date 
+            for this instance .
+            </value>
+        </member>
+        <member name="P:BudgetManager4U.Models.TransactionClass.TransactionAmount">
+            <value>
+            The <c>TransactionAmount</c> property represents an transaction amount 
+            for this instance .
+            </value>
+        </member>
+        <member name="P:BudgetManager4U.Models.TransactionClass.Description">
+            <value>
+            The <c>Description</c> property represents an description of this transaction  
+             instance .
+            </value>
+        </member>
+        <member name="T:BudgetManager4U.WinUI.App">
+            <summary>
+            Provides application-specific behavior to supplement the default Application class.
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.WinUI.App.#ctor">
+            <summary>
+            Initializes the singleton application object.  This is the first line of authored code
+            executed, and as such is the logical equivalent of main() or WinMain().
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.WinUI.App.InitializeComponent">
+            <summary>
+            InitializeComponent()
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.WinUI.App.GetXamlType(System.Type)">
+            <summary>
+            GetXamlType(Type)
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.WinUI.App.GetXamlType(System.String)">
+            <summary>
+            GetXamlType(String)
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.WinUI.App.GetXmlnsDefinitions">
+            <summary>
+            GetXmlnsDefinitions()
+            </summary>
+        </member>
+        <member name="T:BudgetManager4U.WinUI.Program">
+            <summary>
+            Program class
+            </summary>
+        </member>
+        <member name="T:BudgetManager4U.Services.LocalDbService">
+            <summary>
+            Database service of the class <c>LocalDbService</c>  for the data manipulation 
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.#ctor">
+            <summary>
+            Constuctor of the <c>LocalDbService</c> service
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.GetTransactions">
+            <summary>
+            Method of the  <c>LocalDbService</c> service for retrieving all records
+            from the table "Transactions" in the ascending order(by date)
+            </summary>
+            <returns>The  list of the TransactionClass sorted by date</returns>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.GetBalance">
+            <summary>
+            Method of the  <c>LocalDbService</c> service for retrieving the current balance
+            </summary>
+            <returns>The string value of the current balance </returns>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.GetExpenses">
+            <summary>
+            Method of the  <c>LocalDbService</c> service for retrieving all expenses from the table "Transactions" in ascending order (by date)
+            </summary>
+            <returns>The filtered list of the TransactionClass</returns>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.GetIncomes">
+            <summary>
+            Method of the  <c>LocalDbService</c> service for retrieving all incomes from the table "Transactions" in the ascending order(by date)
+            </summary>
+            <returns>The filtered list of the TransactionClass</returns>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.GetExpensesByDate(System.DateTime,System.DateTime)">
+            <summary>
+            Method of the  <c>LocalDbService</c> service for retrieving all expenses from the table "Transactions" in the ascending order(by date)
+            within the defined period
+            </summary>
+            <param name="dateFrom"> Starting date of DateTime type</param>
+            <param name="dateTo"> Starting date of DateTime type</param>
+            <returns>The filtered list of the TransactionClass</returns>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.GetIncomesByDate(System.DateTime,System.DateTime)">
+            <summary>
+            Method of the  <c>LocalDbService</c> service for retrieving all incomes from the table "Transactions" in the ascending order(by date)
+            within the defined period
+            </summary>
+            <param name="dateFrom"> Starting date of DateTime type</param>
+            <param name="dateTo"> Starting date of DateTime type</param>
+            <returns>The filtered list of the TransactionClass</returns>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.AddTransaction(BudgetManager4U.Models.TransactionClass)">
+            <summary>
+            Method of the  <c>LocalDbService</c> service for inserting the transaction record in the database
+            </summary>
+             <param name="transaction"> transaction of the TransactionClass </param>
+            <exception cref="T:System.ArgumentException">
+            Thrown when the arguments are invalid.
+            </exception>
+               /// <exception cref="T:System.Exception">
+            Thrown when the unknown failure occurs
+            </exception>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.UpdateTransaction(BudgetManager4U.Models.TransactionClass)">
+            <summary>
+            Method of the  <c>LocalDbService</c> service for updating the transaction record in the database
+            </summary>
+             <param name="transaction"> transaction of the TransactionClass </param>
+            <exception cref="T:System.ArgumentException">
+            Thrown when the arguments are invalid.
+            </exception>
+            <exception cref="T:System.Exception">
+            Thrown when the unknown failure occurs
+            </exception>
+        </member>
+        <member name="M:BudgetManager4U.Services.LocalDbService.DeleteTransaction(BudgetManager4U.Models.TransactionClass)">
+            <summary>
+            Method of the  <c>LocalDbService</c> service for deleting the transaction record from the database
+            </summary>
+             <param name="transaction"> transaction of the TransactionClass </param>
+        </member>
+        <member name="T:BudgetManager4U.Views.ExpensesPage">
+            <summary>
+             class <c>ExpensesPage</c> Displays a listview with instances of the TransactionsClass  with the negative values of the transactionAmount property
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.Views.ExpensesPage.#ctor(BudgetManager4U.Services.LocalDbService)">
+            <summary>
+            constructor of the class <c>ExpensesPage</c> 
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.Views.ExpensesPage.OnFilterClicked(System.Object,System.EventArgs)">
+            <summary>
+            Updates the current listview values of this page with respect to selected dates
+            </summary>
+            <param name="sender"> object, the control binded to the clicked event</param>
+            <param name="e">argument of triggered event </param>
+            <returns> void </returns>
+        </member>
+        <member name="M:BudgetManager4U.Views.ExpensesPage.OnAppearing">
+            <summary>
+            Updates the current listview  of this page on appearing
+            </summary>
+            <returns> void </returns>
+        </member>
+        <member name="T:BudgetManager4U.Views.IncomesPage">
+            <summary>
+             class <c>IncomesPage</c> Displays a listview with instances of the TransactionsClass  with the negative values of the transactionAmount property
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.Views.IncomesPage.#ctor(BudgetManager4U.Services.LocalDbService)">
+            <summary>
+            constructor of the class <c>IncomesPage</c> 
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.Views.IncomesPage.OnFilterClicked(System.Object,System.EventArgs)">
+            <summary>
+            Updates the current listview values of this page with respect to selected dates
+            </summary>
+            <param name="sender"> object, the control binded to the clicked event</param>
+            <param name="e">argument of triggered event </param>
+            <returns> void </returns>
+        </member>
+        <member name="M:BudgetManager4U.Views.IncomesPage.OnAppearing">
+            <summary>
+            Updates the current listview  of this page on appearing
+            </summary>
+            <returns> void </returns>
+        </member>
+        <member name="T:BudgetManager4U.Views.MainPage">
+            <summary>
+             class <c>MainPage</c> Displays a listview with instances of the TransactionsClass inherits ContentPage class
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.Views.MainPage.#ctor(BudgetManager4U.Services.LocalDbService)">
+            <summary>
+             constructor, Initializes the component and assigns '_dbServices' to provided 'LocalDbService' instance
+            </summary>
+            <param name="dbService"> Instance of the LocalDbService, used for CRUD operations and custom data manipulations</param>
+        </member>
+        <member name="M:BudgetManager4U.Views.MainPage.OnIncomeClicked(System.Object,System.EventArgs)">
+            <summary>
+             handles the click event for adding an income transaction
+            </summary>
+            <param name="sender">object Button "Add Income"</param>
+            <param name="e">event, Clicked</param>
+            <exception cref="T:System.FormatException">
+            Thrown when the arguments are invalid or a composite string is invalid 
+            </exception>
+               /// <exception cref="T:System.Exception">
+            Thrown when the unknown failure occurs
+            </exception>
+        </member>
+        <member name="M:BudgetManager4U.Views.MainPage.OnSaveCsvButtonClicked(System.Object,System.EventArgs)">
+            <summary>
+             handles the click even for saving transactions to CSV file
+            </summary>
+            <param name="sender">object is a Button ExportCsv</param>
+            <param name="e">event, Clicked</param>
+        </member>
+        <member name="M:BudgetManager4U.Views.MainPage.OnExpenseClicked(System.Object,System.EventArgs)">
+            <summary>
+             handles the click event for adding an epense transaction
+            </summary>
+            <param name="sender">the control Button Add Expense</param>
+            <param name="e">The clicked event</param>
+            <exception cref="T:System.FormatException">
+            Thrown when the arguments are invalid or a composite string is invalid 
+            </exception>
+               /// <exception cref="T:System.Exception">
+            Thrown when the unknown failure occurs
+            </exception>
+        </member>
+        <member name="M:BudgetManager4U.Views.MainPage.OnlistViewTapped(System.Object,Microsoft.Maui.Controls.ItemTappedEventArgs)">
+            <summary>
+             handles the tapping event on an item in the list view
+            </summary>
+            <param name="sender">ViewCell, element of the listview</param>
+            <param name="e">the event, here the ItemTapped event</param>
+        </member>
+        <member name="T:BudgetManager4U.BudgetManager4U_XamlTypeInfo.XamlMetaDataProvider">
+            <summary>
+            Main class for providing metadata for the app or library
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.BudgetManager4U_XamlTypeInfo.XamlMetaDataProvider.GetXamlType(System.Type)">
+            <summary>
+            GetXamlType(Type)
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.BudgetManager4U_XamlTypeInfo.XamlMetaDataProvider.GetXamlType(System.String)">
+            <summary>
+            GetXamlType(String)
+            </summary>
+        </member>
+        <member name="M:BudgetManager4U.BudgetManager4U_XamlTypeInfo.XamlMetaDataProvider.GetXmlnsDefinitions">
+            <summary>
+            GetXmlnsDefinitions()
+            </summary>
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Release.Major">
+            The major version of the Windows App SDK release.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Release.Minor">
+            The minor version of the Windows App SDK release.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Release.Patch">
+            The patch version of the Windows App SDK release.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Release.MajorMinor">
+            The major and minor version of the Windows App SDK release, encoded as a uint32_t (0xMMMMNNNN where M=major, N=minor).
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Release.Channel">
+            The Windows App SDK release's channel; for example, "preview", or empty string for stable.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Release.VersionTag">
+            The Windows App SDK release's version tag; for example, "preview2", or empty string for stable.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Release.VersionShortTag">
+            The Windows App SDK release's short-form version tag; for example, "p2", or empty string for stable.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Release.FormattedVersionTag">
+            The Windows App SDK release's version tag, formatted for concatenation when constructing identifiers; for example, "-preview2", or empty string for stable.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Release.FormattedVersionShortTag">
+            The Windows App SDK release's short-form version tag, formatted for concatenation when constructing identifiers; for example, "-p2", or empty string for stable.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Identity.Publisher">
+            The Windows App SDK runtime's package identity's Publisher.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Identity.PublisherId">
+            The Windows App SDK runtime's package identity's PublisherId.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Version.Major">
+            The major version of the Windows App SDK runtime; for example, 1000.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Version.Minor">
+            The minor version of the Windows App SDK runtime; for example, 446.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Version.Build">
+            The build version of the Windows App SDK runtime; for example, 804.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Version.Revision">
+            The revision version of the Windows App SDK runtime; for example, 0.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Version.UInt64">
+            The version of the Windows App SDK runtime, as a uint64l for example, 0x03E801BE03240000.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Version.DotQuadString">
+            The version of the Windows App SDK runtime, as a string (const wchar_t*); for example, "1000.446.804.0".
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Packages.Framework.PackageFamilyName">
+            The Windows App SDK runtime's Framework package's family name.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Packages.Main.PackageFamilyName">
+            The Windows App SDK runtime's Main package's family name.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Packages.Singleton.PackageFamilyName">
+            The Windows App SDK runtime's Singleton package's family name.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Packages.DDLM.X86.PackageFamilyName">
+            The Windows App SDK runtime's Dynamic Dependency Lifetime Manager (DDLM) package's family name, for x86.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Packages.DDLM.X64.PackageFamilyName">
+            The Windows App SDK runtime's Dynamic Dependency Lifetime Manager (DDLM) package's family name, for x64.
+        </member>
+        <member name="F:Microsoft.WindowsAppSDK.Runtime.Packages.DDLM.Arm64.PackageFamilyName">
+            The Windows App SDK runtime's Dynamic Dependency Lifetime Manager (DDLM) package's family name, for arm64.
+        </member>
+    </members>
+</doc>

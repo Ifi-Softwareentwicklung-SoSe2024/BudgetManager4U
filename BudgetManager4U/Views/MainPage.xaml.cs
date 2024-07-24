@@ -4,6 +4,9 @@ using System.Collections.ObjectModel;
 using System.Reflection.Metadata;
 
 namespace BudgetManager4U.Views;
+/// <summary>
+///  class <c>MainPage</c> Displays a listview with instances of the TransactionsClass inherits ContentPage class
+/// </summary>
 
 public partial class MainPage : ContentPage
 {
@@ -12,10 +15,10 @@ public partial class MainPage : ContentPage
 
 
     /// <summary>
-    ///  constructor, Initalizaties the component and assgins '_dbServices' to provided 'LocalDbService' instance
+    ///  constructor, Initializes the component and assigns '_dbServices' to provided 'LocalDbService' instance
     /// </summary>
-    /// <param name="dbService"></param>
-    /// <returns></returns>
+    /// <param name="dbService"> Instance of the LocalDbService, used for CRUD operations and custom data manipulations</param>
+    
     public MainPage(LocalDbService dbService)
     {
         InitializeComponent();
@@ -27,14 +30,20 @@ public partial class MainPage : ContentPage
 
 
     /// <summary>
-    ///  handles the click even for adding an income transaction
+    ///  handles the click event for adding an income transaction
     /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
-    /// <returns></returns>
+    /// <param name="sender">object Button "Add Income"</param>
+    /// <param name="e">event, Clicked</param>
+    /// <exception cref="FormatException">
+    /// Thrown when the arguments are invalid or a composite string is invalid 
+    /// </exception>
+    ///    /// <exception cref="Exception">
+    /// Thrown when the unknown failure occurs
+    /// </exception>
 
     private async void OnIncomeClicked(object sender, EventArgs e)
     {
+        
         try
         {
             if (_editTransactionId == 0 && TransactionAmountEntryField.Text != null)
@@ -81,13 +90,13 @@ public partial class MainPage : ContentPage
     /// <summary>
     ///  handles the click even for saving transactions to CSV file
     /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
-    /// <returns></returns>
+    /// <param name="sender">object is a Button ExportCsv</param>
+    /// <param name="e">event, Clicked</param>
+   
     
     private async void OnSaveCsvButtonClicked(object sender, EventArgs e)
     {
-        //List<TransactionClass> transactions = await _dbService.GetTransactionsAsync();
+      
         List<TransactionClass> transactions = await _dbService.GetTransactions();
         string fileName = $"Transactions_{DateTime.Now:yyyyMMdd}.csv";
 
@@ -99,14 +108,20 @@ public partial class MainPage : ContentPage
 
 
     /// <summary>
-    ///  handles the click even for adding an epense transaction
+    ///  handles the click event for adding an epense transaction
     /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
-    /// <returns></returns>
+    /// <param name="sender">the control Button Add Expense</param>
+    /// <param name="e">The clicked event</param>
+   /// <exception cref="FormatException">
+        /// Thrown when the arguments are invalid or a composite string is invalid 
+        /// </exception>
+        ///    /// <exception cref="Exception">
+        /// Thrown when the unknown failure occurs
+        /// </exception>
 
     private async void OnExpenseClicked(object sender, EventArgs e)
     {
+        
         try
         {
             if (_editTransactionId == 0 && TransactionAmountEntryField.Text != null)
@@ -149,11 +164,11 @@ public partial class MainPage : ContentPage
 
 
     /// <summary>
-    ///  handles the tapping even on an item in the list view
+    ///  handles the tapping event on an item in the list view
     /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
-    /// <returns></returns>
+    /// <param name="sender">ViewCell, element of the listview</param>
+    /// <param name="e">the event, here the ItemTapped event</param>
+    
 
     public async void OnlistViewTapped(object sender, ItemTappedEventArgs e)
     {

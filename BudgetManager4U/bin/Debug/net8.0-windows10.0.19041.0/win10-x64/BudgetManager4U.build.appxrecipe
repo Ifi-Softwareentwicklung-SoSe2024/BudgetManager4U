@@ -445,6 +445,9 @@
     <AppxPackagedFile Include="C:\Users\ki30cane\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.8\runtimes\win-x64\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DocFile.xml">
+      <PackagePath>DocFile.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ki30cane\.nuget\packages\microsoft.maui.controls.compatibility\8.0.7\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
     </AppxPackagedFile>
