@@ -68,7 +68,7 @@
 		<PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.8" />
 	</ItemGroup>
 <PropertyGroup>
-  <DocumentationFile>C:\Users\ki30cane\Documents\SWSoSe24\BudgetManager4U\documentXMl\DocFile.xml</DocumentationFile>
+  <DocumentationFile>..\BudgetManager4U\documentXMl\DocFile.xml</DocumentationFile>
 </PropertyGroup>	
 	<ItemGroup>
 	  <MauiXaml Update="Views\ExpensesPage.xaml">
